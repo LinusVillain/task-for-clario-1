@@ -1,11 +1,4 @@
-$body-color: red;
-
-body {
-  background-color: $body-color;
-}
-
-.first {
-    width: 40px;
-    height: 70px;
-    background-color: yellow;
-}
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "variables.scss";
+@import "global.scss";
+@import "blocks/visually-hidden.scss";
