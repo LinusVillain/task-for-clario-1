@@ -451,10 +451,11 @@ template {
 }
 
 body {
-  background-color: #696969;
+  background-color: #C0C0C0;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
+  font-size: 18px;
 }
 
 a {
@@ -472,5 +473,112 @@ p, button {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.start-page__button {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: calc(50% - (100px / 2));
+  left: calc(50% - (200px / 2));
+  background-color: rgba(240, 128, 128, 0.8);
+  border-radius: 2%;
+  border: 3px solid #F08080;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  color: #800000;
+  cursor: pointer;
+}
+.start-page__button:active {
+  transform: translate(1px, -1px);
+  filter: saturate(50%);
+}
+.start-page__button:focus-visible {
+  border: 6px solid #F08080;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup__wrapper {
+  position: absolute;
+  top: calc(50% - (600px / 2) - 40px);
+  left: calc(50% - (800px / 2) - 40px);
+  padding: 40px;
+  width: 800px;
+  height: 600px;
+  background-color: #FFFFFF;
+  border-radius: 2%;
+}
+
+.popup__close-button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+}
+.popup__close-button:active {
+  transform: translate(3px, -3px);
+  filter: saturate(50%);
+}
+.popup__close-button svg {
+  width: 40px;
+  height: 40px;
+}
+
+.popup__svg {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+}
+
+.popup__question {
+  width: 700px;
+  margin: auto;
+  font-size: 45px;
+  color: #696969;
+  text-align: center;
+}
+
+.popup__buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.popup__resolution-button {
+  background-color: transparent;
+  border: 3px solid #C0C0C0;
+  border-radius: 2%;
+  width: 300px;
+  height: 60px;
+  font-weight: bold;
+  color: #808080;
+  font-size: 30px;
+}
+.popup__resolution-button--red {
+  color: #FFFAFA;
+  background-color: #ff3b30;
+  border: 3px solid #ff3b30;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.popup__resolution-button:active {
+  transform: translate(3px, -3px);
+  filter: saturate(50%);
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -10,14 +10,14 @@
     <main class="start-page">
 
       <h1 class="start-page__title visually-hidden">The page for uninstalling the Shazam app.</h1>
+      
+      <button class="start-page__button" tabindex="1">Uninstall the Shazam</button>
 
-      <button class="start-page__button">Uninstall the Shazam</button>
-
-      <section class="popup  hidden">
+      <section class="popup hidden">
         <div class="popup__wrapper">
           <h2 class="popup__title visually-hidden">Warning</h2>
 
-          <button class="popup__close-button">
+          <button class="popup__close-button" tabindex="1">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
               <g>
                 <g>
@@ -30,7 +30,7 @@
             </svg>
           </button>
 
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+          <svg class="popup__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
             <g>
               <path fill="#ff3b30" d="M20,6c0.7,0,1,0.3,1.1,0.5l13.8,25.2c0,0.1,0,0.1,0,0.2l0,0l0,0c0,0,0,0,0,0.1l0,0.1l0,0.1l0,0
                 c0,0.4-0.4,0.8-0.8,0.8H5.8C5.4,33,5,32.6,5,32.2c0-0.1,0-0.2,0.1-0.3l0.2-0.6l0,0L18.9,6.4C19,6.3,19.3,6,20,6 M20,4
@@ -49,14 +49,16 @@
           <p class="popup__question">Are you sure you want to unistall the Shazam app</p>
 
           <div class="popup__buttons-wrapper">
-            <button class="popup__resolution-button">Cancel</button>
-            <button class="popup__resolution-button popup__resolution-button--red">Uninstall</button>
+            <button class="popup__resolution-button" tabindex="2">Cancel</button>
+            <button class="popup__resolution-button popup__resolution-button--red" tabindex="3">Uninstall</button>
           </div>
         
         </div>
       </section>
 
     </main>
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>

@@ -1,0 +1,23 @@
+.start-page__button {
+    display: block;
+    position: absolute;
+    width: $main-button-width;
+    height: $main-button-height;
+    top: calc(50% - (#{$main-button-height} / 2));
+    left: calc(50% - (#{$main-button-width} / 2));
+    background-color: $main-button-color;
+    border-radius: $small-radius;
+    border: $normal-border solid $main-button-border-color;
+    box-shadow: $offset $offset $offset $translucent; 
+    color: $main-button-font-color;
+    cursor: pointer;
+
+    &:active {
+        transform: translate(1px, -1px);
+        filter: saturate(50%);
+    }
+
+    &:focus-visible {
+        border: $focus-border solid $main-button-border-color;
+    }
+}

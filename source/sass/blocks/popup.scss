@@ -1,0 +1,85 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $overlay;
+}
+
+
+.popup__wrapper {
+    position: absolute;
+    top: calc(50% - (#{$popup-height} / 2) - #{$popup-padding});
+    left: calc(50% - (#{$popup-width} / 2) - #{$popup-padding});
+    padding: $popup-padding;
+    width: $popup-width;
+    height: $popup-height;
+    background-color: $popup-background;
+    border-radius: $small-radius;
+}
+
+.popup__close-button {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+
+    &:active {
+        transform: translate($popup-offset, -$popup-offset);
+        filter: saturate(50%);
+    }
+
+    & svg {
+        width: $close-button-side;
+        height: $close-button-side;
+    }
+}
+
+.popup__svg {
+    display: block;
+    width: $danger-sign-side;
+    height: $danger-sign-side;
+    margin: $danger-sign-margin auto;
+}
+
+.popup__question {
+    width: $question-width;
+    margin: auto;
+    font-size: $question-font-size;
+    color: $question-color;
+    text-align: center;
+}
+
+.popup__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: $question-width;
+    margin: auto;
+    margin-top: $button-margin;
+}
+
+.popup__resolution-button {
+    background-color: transparent;
+    border: $normal-border solid $button-border-color;
+    border-radius: $small-radius;
+    width: $button-width;
+    height: $button-height;
+    font-weight: bold;
+    color: $button-font-color;
+    font-size: $button-font-size;
+
+    &--red {
+        color: $red-button-font-color;
+        background-color: $red-button-background;
+        border: $normal-border solid $red-button-background;
+        box-shadow: 0 $offset $offset $translucent;
+    }
+
+    &:active {
+        transform: translate($popup-offset, -$popup-offset);
+        filter: saturate(50%);
+    }
+}
